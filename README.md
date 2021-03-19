@@ -1,7 +1,7 @@
 
 # Swift Style Guide
 
-![Swift](https://img.shields.io/badge/Swift-5+-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-5.2-orange.svg)
 [![Creative Commons License](https://img.shields.io/badge/license-StyleShare-blue)](https://github.com/StyleShare/swift-style-guide)
 
 
