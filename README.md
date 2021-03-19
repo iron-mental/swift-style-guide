@@ -1,4 +1,10 @@
-# swift-style-guide
+
+# Swift Style Guide
+
+![Swift](https://img.shields.io/badge/Swift-5+-orange.svg)
+[![Creative Commons License](https://img.shields.io/badge/license-StyleShare-blue)](https://github.com/StyleShare/swift-style-guide)
+
+
 
  >__Terminal__ 프로젝트 협업 Swift 스타일 가이드입니다. 프로젝트 현황에 따라서 수시 변동될 수 있습니다.
  
