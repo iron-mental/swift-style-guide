@@ -189,3 +189,7 @@ final class MyViewController: UIViewController, UITableViewDataSource, UITableVi
   // ...
 }
 ```
+
+## 라이센스 
+본 문서는 [스타일쉐어](https://github.com/StyleShare/swift-style-guide) 스타일 가이드를 인용하였으며, 저작권은 [전수열님](https://github.com/devxoul)과 [StyleShare](https://www.styleshare.kr/)에게 있습니다.
+
