@@ -29,24 +29,24 @@ import Then
 ### 코드 들여쓰기
 - 코드의 들여쓰기는 탭(tab)으로 구분합니다.
 
-#### 클래스 
+### 클래스 
 - 클래스 이름에는 UpperCamelCase를 사용합니다.
 
-#### 함수
+### 함수
 - lowerCamelCase를 사용합니다.
 - Action 함수의 네이밍은 '주어 + 동사 + 목적어' 형태를 사용합니다.
 	- *Tap(눌렀다 뗌)*은 `UIControlEvents`의 `.touchUpInside`에 대응하고, *Press(누름)*는 `.touchDown`에 대응합니다.
 	- *will~*은 특정 행위가 일어나기 직전이고, *did~*는 특정 행위가 일어난 직후입니다.
 
-#### 변수
+### 변수
 - lowerCamelCase를 사용합니다.
 - 변수의 정렬 순서는 disposebag, instance들, ui 요소들, 그 외의 변수 순으로 정렬합니다.
 - 변수는 성격별로 구분 짓고 주석을 덧붙힙니다.
 
-#### 상수
+### 상수
 - lowerCamelCase를 사용합니다.
 
-#### 약어
+### 약어
 - 약어로 시작하는 경우 소문자로 표기하고, 그 외의 경우에는 항상 대문자로 표기합니다.
 
 **좋은 예:**
@@ -66,6 +66,40 @@ let HTML: String?
 let websiteUrl: NSURL?
 let URLString: String?
 ```
+
+### 클로저
+- 파라미터와 리턴 타입이 없는 Closure 정의시에는 () -> Void를 사용합니다.
+
+**좋은 예:**
+
+```swift
+let completionHandler: (() -> Void)?
+```
+
+**나쁜 예:**
+
+```swift
+let completionHandler: (() -> ())?
+let completionHandler: ((Void) -> (Void))?
+```
+- Closure 정의시 파라미터에는 괄호를 사용하지 않습니다.
+
+**좋은 예:**
+
+```swift
+{ first, second in
+  // doSomething()
+}
+```
+
+**나쁜 예:**
+
+```swift
+{ (first, second) in
+  // doSomething()
+}
+```
+
 
 ### 주석
 - //를 사용해서 문서화에 사용되는 주석을 남깁니다.
@@ -112,11 +146,10 @@ override func menuButtonDidTap() {
 - 가능하다면 변수를 선언을 한 뒤 attribute, layout 함수에 성격에 맞게 정의합니다.
 
 ```swift
-
 var checkBox = UIButton()
 var idLabel = UILabel()
 
-func atrribute {
+func attribute {
 	checkBox.do {
 		$0.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
 	}
@@ -138,5 +171,28 @@ func layout {
 		$0.centerY.equalToSuperview()
 		$0.left.equalTo(userImageView.snp.right).offset(10)
 	}
+}
+```
+
+- 더이상 상속이 발생하지 않는 클래스는 항상 final 키워드로 선언합니다.
+- 프로토콜을 적용할 때에는 extension을 만들어서 관련된 메서드를 모아둡니다.
+
+**좋은 예:**
+
+```swift
+final class MyViewController: UIViewController {
+  // ...
+}
+
+extension MyViewController: UITableViewDelegate, UITableViewDataSource {
+  // ...
+}
+```
+
+**나쁜 예:**
+
+```swift
+final class MyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+  // ...
 }
 ```
