@@ -1,6 +1,8 @@
 # swift-style-guide
 
  >__Terminal__ 프로젝트 협업 Swift 스타일 가이드입니다. 프로젝트 현황에 따라서 수시 변동될 수 있습니다.
+ 
+ - 스타일 컨벤션의 일부는 [SwiftLint](https://github.com/realm/SwiftLint) 준수합니다.
 
 ## 커밋 TYPE
 
