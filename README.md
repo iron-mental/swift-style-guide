@@ -9,7 +9,6 @@
 - docs : 문서의 수정
 - style : (코드의 수정 없이) 스타일(style)만 변경(들여쓰기 같은 포맷이나 세미콜론을 빼먹은 경우)
 - refactor : 코드를 리펙토링
-- test : Test 관련한 코드의 추가, 수정
 - chore : (코드의 수정 없이) 설정을 변경
 
 ## 코드 레이아웃
@@ -19,9 +18,7 @@
 ```swift
 import UIkit
 import Foundation
-import RxSwift
-import RxCocoa
-import SnapKit
+import Alamofire
 import Then
 ```
 
@@ -33,9 +30,6 @@ import Then
 
 ### 함수
 - lowerCamelCase를 사용합니다.
-- Action 함수의 네이밍은 '주어 + 동사 + 목적어' 형태를 사용합니다.
-	- *Tap(눌렀다 뗌)*은 `UIControlEvents`의 `.touchUpInside`에 대응하고, *Press(누름)*는 `.touchDown`에 대응합니다.
-	- *will~*은 특정 행위가 일어나기 직전이고, *did~*는 특정 행위가 일어난 직후입니다.
 
 ### 변수
 - lowerCamelCase를 사용합니다.
